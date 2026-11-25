@@ -1,9 +1,172 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Shop products from local vendors"><link rel="stylesheet" href="style.css"><title>LocalVibe - Shop Local. Support Local.</title></head>
-<body><header><nav aria-label="Main navigation"><div class="flex-box">
-<a href="index.html" style="font-size:28px;font-weight:bold;color:purple;text-decoration:none">LocalVibe</a>
-<div class="home"><a class="nav" href="index.html">Home</a></div><div class="home"><a class="nav" href="orders.html">Orders</a></div><div class="home"><a class="nav" href="cart.html">Cart</a></div><div class="home"><a class="nav" href="profile.html">Profile</a></div><div class="home"><a class="nav" href="vendorsdashboard.html">Become a Vendor</a></div><div class="home"><a class="nav" href="signin.html">Sign in</a></div>
-</div></nav></header>
-<section class="flex-box2"><div class="xyz"><h1 style="color:purple;font-size:50px">LocalVibe</h1><h2 style="font-size:40px">Shop Local. Support Local.</h2><small style="font-size:20px">Discover amazing products from nearby vendors</small><br><small style="font-size:20px">and support small businesses....</small></div><div class="xyz"><h2>Discover Local Products</h2><p>Explore products and support small businesses in your community.</p></div></section>
-<section class="products" id="products"><h2>Sample Products</h2><p>Product photos can be added to the images folder.</p></section>
-<footer style="text-align:center"><p>CSE326 Project</p><p>HTML5 | CSS | JavaScript</p></footer></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="online shopping of clothes,toys,fashion products,makeup">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>LocalVibe: Online Shopping for Kids,Men,Women,Fashion & many more</title>
+</head>
+<body>
+    <header>
+        <nav aria-label="main navigation bar">
+            <div class="flex-box">
+
+                <a href="index.html" style="font-size:28px;font-weight:bold;color:purple;text-decoration:none">LocalVibe</a>
+                <div>
+                    <form action="/search" method="GET">
+                    <input  id='search' type="text" name="q" placeholder="Search for kurti,jeans,shirts,jewellery & many more" id="search-input" autocomplete="off" required></input>
+                    <button type="submit" >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="23" y1="23" x2="17" y2="17"></line></svg>
+                    </button>
+                    </form>
+                </div>
+
+                <div class="home"><a class="nav" href=index.html>Home</a> </div>
+                <div class="home"><a class="nav" href=orders.html>Orders</a></div>
+                <div class="home"><a class="nav" href=cart.html>Cart</a></div>
+                <div class="home"><a class="nav" href=profile.html>Profile</a></div>
+                <div class="home"><a class="nav" href=vendorsdashboard.html>Become a Vendor</a></div> 
+                <div class="home"><a class="nav" href=signin.html>Sign in</a></div>         
+            </div>
+        </nav>
+    </header>
+
+    <section class="flex-box2">
+        <div class="xyz">
+            <h1 style ="color:purple; font-size:50px">LocalVibe</h1>
+            <h2 style="font-size:40px ">Shop Local. Support Local.</h2>
+            <small style="font-size:20px;">Discover amazing products from nearby vendors</small><br>
+            <small style="font-size:20px">and support small businesses....</small>
+            
+        </div>
+        <div>
+            <img src="poster.jpeg" alt="LocalVibe" loading="lazy" height="300px" width="1000px">
+        </div>
+    </section>
+
+    
+    <section class="products">
+        <h2>Sample Products</h2>
+        <div class="product_grid">
+            <div class="product_card">
+                <img src="images/image1.jpeg" alt="goggles" loading="lazy">
+                <h3>Goggles</h3>
+                <p class="price">INR 599</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image2.jpeg" alt="watch" loading="lazy">
+                <h3>Watch</h3>
+                <p class="price">INR 499</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image3.jpeg" alt="Hoddie" loading="lazy">
+                <h3>Hoddie</h3>
+                <p class="price">INR 499</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image13.jpeg" alt="Earrings" loading="lazy">
+                <h3>Earrings</h3>
+                <p class="price">INR 299</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image4.jpeg" alt="Watch" loading="lazy">
+                <h3>Watch</h3>
+                <p class="price">INR 759</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image5.jpeg" alt="Heels" loading="lazy">
+                <h3>Heels</h3>
+                <p class="price">INR 999</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image8.jpeg" alt="Earrings" loading="lazy">
+                <h3>Earrings</h3>
+                <p class="price">INR 159</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image6.jpeg" alt="Heels" loading="lazy">
+                <h3>Heels</h3>
+                <p class="price">INR 1299</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image7.jpeg" alt="Shoes" loading="lazy">
+                <h3>Shoes</h3>
+                <p class="price">INR 999</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image11.jpeg" alt="earrings" loading="lazy">
+                <h3>Earrings</h3>
+                <p class="price">INR 199</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image14.jpeg" alt="Kurti" loading="lazy">
+                <h3>Kurti</h3>
+                <p class="price">INR 199</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image9.jpeg" alt="Hat" loading="lazy">
+                <h3>Hat</h3>
+                <p class="price">INR 699</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image10.jpeg" alt="Braclete" loading="lazy">
+                <h3>Braclete</h3>
+                <p class="price">INR 110</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image12.jpeg" alt="earrings" loading="lazy">
+                <h3>Earrings</h3>
+                <p class="price">INR 259</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image14.jpeg" alt="Kurti" loading="lazy">
+                <h3>Kurti</h3>
+                <p class="price">INR 699</p>
+                <button type="button">Add to Cart</button>
+            </div>
+
+            <div class="product_card">
+                <img src="images/image13.jpeg" alt="earrings" loading="lazy">
+                <h3>Earrings</h3>
+                <p class="price">INR 199</p>
+                <button type="button">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center;">
+        <p3>CSE326 Project</p3>
+        <p>HTML5 | CSS | JavaScript</p>
+    </footer>
+</body>
+</html>
