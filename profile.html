@@ -1,51 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Profile | LocalVibe</title>
-<link rel="stylesheet" href="profile.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | LocalVibe</title>
+    <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="index.html">LocalVibe</a>
-  <nav><a href="index.html">Home</a><a href="index.html#products">Shop</a><a href="cart.html">Cart</a><a class="active" href="profile.html">My Profile</a></nav>
-</header>
-<main class="layout">
-  <aside class="sidebar">
-    <div class="avatar" id="avatar">U</div>
-    <h2 id="sideName">My Profile</h2>
-    <p id="sideEmail">Sign in to view your details</p>
-    <a href="profile.html">My Profile</a>
-    <a href="orders.html">My Orders</a>
-    <a href="orders.html">Track Order</a>
-    <a href="cart.html">My Cart</a>
-    <a href="#" id="logout" class="logout">Logout</a>
-  </aside>
-  <section class="content">
-    <div class="panel">
-      <h2>Overview</h2>
-      <div class="stats">
-        <div><b id="orderCount">0</b><span>Total Orders</span></div>
-        <div><b id="cartCount">0</b><span>In Cart</span></div>
-        <div><b id="deliveryCount">0</b><span>On the Way</span></div>
-      </div>
-    </div>
-    <div class="panel">
-      <h2>Personal Details</h2>
-      <div class="detail"><span>Full Name</span><p id="fullName">-</p></div>
-      <div class="detail"><span>Email</span><p id="email">-</p></div>
-      <div class="detail"><span>Phone</span><p id="phone">Not provided</p></div>
-      <div class="detail"><span>Address</span><p id="address">Not provided</p></div>
-      <p class="hint">Profile details are displayed from the account used to sign in. Editing is disabled in this demo.</p>
-    </div>
-    <div class="panel">
-      <h2>Recent Orders</h2>
-      <p class="muted">No orders yet. Go to the shop and place your first order!</p>
-      <a class="button" href="orders.html">View All Orders</a>
-    </div>
-  </section>
-</main>
-<script src="app.js"></script>
+    <header>
+        <a class="logo" href="index.html">LocalVibe</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="profile.html" class="active">Profile</a>
+        </nav>
+    </header>
+
+    <main class="profile-layout">
+        <aside class="sidebar">
+            <div class="avatar" id="userAvatar">U</div>
+            <h2 id="userName">User</h2>
+            <p id="userEmail">Please sign in</p>
+            <a href="profile.html">My Profile</a>
+            <a href="cart.html">My Cart</a>
+            <a href="index.html" id="logoutButton">Logout</a>
+        </aside>
+
+        <section class="details">
+            <div class="panel">
+                <h2>Overview</h2>
+                <div class="overview">
+                    <div><strong>0</strong><span>Total Orders</span></div>
+                    <div><strong id="cartCount">0</strong><span>In Cart</span></div>
+                    <div><strong>0</strong><span>On the Way</span></div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Personal Details</h2>
+                <div class="detail-row"><span>Full Name</span><p id="fullName">-</p></div>
+                <div class="detail-row"><span>Email</span><p id="email">-</p></div>
+            </div>
+        </section>
+    </main>
+    <script src="profile.js"></script>
 </body>
 </html>
