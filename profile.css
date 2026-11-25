@@ -162,3 +162,4 @@ nav a:hover, nav .active {
         gap: 5px;
     }
 }
+.brand-logo{display:flex;align-items:center;gap:9px;color:#17112f;font-size:28px;font-weight:800;text-decoration:none}.brand-logo img{width:46px;height:46px;object-fit:contain}.brand-purple{color:#7132c8}
