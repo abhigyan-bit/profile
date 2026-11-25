@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Vendor | LocalVibe</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">LocalVibe</a>
+    <nav><a href="index.html">Home</a><a href="vendor_signin.html">Vendor Sign In</a></nav>
+</header>
+<main class="auth-box">
+    <h1>Register Your Store</h1>
+    <p>Join LocalVibe and start listing your products.</p>
+    <form id="vendorSignupForm">
+        <label for="storeName">Store Name</label>
+        <input id="storeName" type="text" required>
+        <label for="vendorName">Owner Name</label>
+        <input id="vendorName" type="text" required>
+        <label for="newVendorEmail">Email Address</label>
+        <input id="newVendorEmail" type="email" required>
+        <label for="vendorPhone">Phone Number</label>
+        <input id="vendorPhone" type="tel" required>
+        <label for="vendorLocation">Store Location</label>
+        <input id="vendorLocation" type="text" required>
+        <label for="newVendorPassword">Password</label>
+        <input id="newVendorPassword" type="password" minlength="6" required>
+        <button type="submit">Create Vendor Account</button>
+    </form>
+    <p class="auth-note">Already registered? <a href="vendor_signin.html">Vendor Sign In</a></p>
+</main>
+<script src="profile.js"></script>
+</body>
+</html>

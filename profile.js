@@ -105,3 +105,72 @@ if (profilePage) {
         });
     }
 }
+ 
+// Vendor registration.
+const vendorSignupForm = document.getElementById("vendorSignupForm");
+
+if (vendorSignupForm) {
+    vendorSignupForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const vendor = {
+            storeName: document.getElementById("storeName").value.trim(),
+            name: document.getElementById("vendorName").value.trim(),
+            email: document.getElementById("newVendorEmail").value.trim(),
+            phone: document.getElementById("vendorPhone").value.trim(),
+            location: document.getElementById("vendorLocation").value.trim(),
+            password: document.getElementById("newVendorPassword").value
+        };
+
+        const vendors = JSON.parse(localStorage.getItem("localVibeVendors")) || [];
+        const alreadyRegistered = vendors.some(function(item) {
+            return item.email === vendor.email;
+        });
+
+        if (alreadyRegistered) {
+            alert("A vendor account with this email already exists.");
+            return;
+        }
+
+        vendors.push(vendor);
+        localStorage.setItem("localVibeVendors", JSON.stringify(vendors));
+
+        alert("Vendor account created. Please sign in.");
+        window.location.href = "vendor_signin.html";
+    });
+}
+
+// Vendor sign-in.
+const vendorLoginForm = document.getElementById("vendorLoginForm");
+
+if (vendorLoginForm) {
+    vendorLoginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const email = document.getElementById("vendorEmail").value.trim();
+        const password = document.getElementById("vendorPassword").value;
+        const vendors = JSON.parse(localStorage.getItem("localVibeVendors")) || [];
+
+        const vendor = vendors.find(function(item) {
+            return item.email === email && item.password === password;
+        });
+
+        if (!vendor) {
+            alert("Vendor account not found. Please register first.");
+            return;
+        }
+
+        sessionStorage.setItem("localVibeVendor", JSON.stringify(vendor));
+        window.location.href = "vendorsdashboard.html";
+    });
+}
+
+const vendorHeading = document.getElementById("vendorWelcome");
+if (vendorHeading) {
+    const activeVendor = JSON.parse(sessionStorage.getItem("localVibeVendor"));
+    if (!activeVendor) {
+        window.location.href = "vendor_signin.html";
+    } else {
+        vendorHeading.textContent = "Welcome, " + activeVendor.storeName + "!";
+    }
+}
