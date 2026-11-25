@@ -1,0 +1,146 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f2fc;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+}
+
+.top-nav h2 {
+    color: purple;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(77, 2, 189);
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.dashboard {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: rgb(77, 2, 189);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar h2 {
+    color: white;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin: 8px 0;
+}
+
+.sidebar a:hover {
+    background-color: #9b65dc;
+}
+
+.content {
+    flex: 1;
+}
+
+.welcome {
+    background-color: rgb(223, 186, 241);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.boxes {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.box h2 {
+    color: purple;
+}
+
+.section {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    color: purple;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+}
+
+form input {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(77, 2, 189);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+    }
+
+    .boxes {
+        flex-direction: column;
+    }
+
+    .top-nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

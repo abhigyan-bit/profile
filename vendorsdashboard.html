@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Dashboard - LocalVibe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vendorsdashboard.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <h2>♥ LocalVibe</h2>
+
+            <a href="index.html">Home</a>
+            <a href="vendorsdashboard.html">Dashboard</a>
+            <a href="vendor.html">Become a Vendor</a>
+        </nav>
+    </header>
+
+    <div class="dashboard">
+
+        <div class="sidebar">
+            <h2>Vendor Panel</h2>
+
+            <a href="#overview">Dashboard</a>
+            <a href="#products">My Products</a>
+            <a href="#orders">Orders</a>
+            <a href="#store">Store Details</a>
+            <a href="#addproduct">Add Product</a>
+            <a href="index.html">Logout</a>
+        </div>
+
+        <div class="content">
+
+            <div class="welcome" id="overview">
+                <h1>Welcome, Vendor!</h1>
+                <p>Manage your store and products with LocalVibe.</p>
+            </div>
+
+            <div class="boxes">
+
+                <div class="box">
+                    <h2>12</h2>
+                    <p>Total Products</p>
+                </div>
+
+                <div class="box">
+                    <h2>8</h2>
+                    <p>New Orders</p>
+                </div>
+
+                <div class="box">
+                    <h2>25</h2>
+                    <p>Completed Orders</p>
+                </div>
+
+            </div>
+
+            <div class="section" id="products">
+                <h2>My Products</h2>
+
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                    </tr>
+
+                    <tr>
+                        <td>Handmade Bag</td>
+                        <td>₹299</td>
+                        <td>15</td>
+                    </tr>
+
+                    <tr>
+                        <td>Designer Kurti</td>
+                        <td>₹599</td>
+                        <td>10</td>
+                    </tr>
+
+                    <tr>
+                        <td>Handmade Candle</td>
+                        <td>₹199</td>
+                        <td>20</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section" id="orders">
+                <h2>Recent Orders</h2>
+
+                <table>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Product</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>#101</td>
+                        <td>Handmade Bag</td>
+                        <td>Delivered</td>
+                    </tr>
+
+                    <tr>
+                        <td>#102</td>
+                        <td>Designer Kurti</td>
+                        <td>Pending</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section" id="store">
+                <h2>Store Details</h2>
+
+                <p><b>Store Name:</b> Local Handmade Store</p>
+                <p><b>Location:</b> India</p>
+                <p><b>Category:</b> Fashion and Accessories</p>
+            </div>
+
+            <div class="section" id="addproduct">
+                <h2>Add New Product</h2>
+
+                <form>
+                    <label>Product Name</label>
+                    <input type="text" placeholder="Enter product name" required>
+
+                    <label>Product Price</label>
+                    <input type="number" placeholder="Enter price" required>
+
+                    <label>Product Quantity</label>
+                    <input type="number" placeholder="Enter quantity" required>
+
+                    <button type="submit">Add Product</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
