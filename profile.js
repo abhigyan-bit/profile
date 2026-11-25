@@ -1,8 +1,9 @@
-// Simple demo account handling for LocalVibe.
+// Customer account, sign-in and profile page.
 
 const signupForm = document.getElementById("signup-form");
 const loginForm = document.getElementById("loginForm");
 
+// Create a customer account.
 if (signupForm) {
     signupForm.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -23,11 +24,11 @@ if (signupForm) {
 
         let accounts = JSON.parse(localStorage.getItem("localVibeAccounts")) || [];
 
-        const alreadyExists = accounts.some(function(user) {
+        const exists = accounts.some(function(user) {
             return user.email === account.email;
         });
 
-        if (alreadyExists) {
+        if (exists) {
             alert("This email is already registered.");
             return;
         }
@@ -40,6 +41,7 @@ if (signupForm) {
     });
 }
 
+// Customer sign-in.
 if (loginForm) {
     loginForm.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -57,33 +59,48 @@ if (loginForm) {
             return;
         }
 
-        sessionStorage.setItem("localVibeUser", JSON.stringify({
-            name: user.name,
-            email: user.email
-        }));
-
+        sessionStorage.setItem("localVibeUser", JSON.stringify(user));
         window.location.href = "profile.html";
     });
 }
 
-const profileName = document.getElementById("userName");
+// Show the details of the signed-in customer.
+const profilePage = document.getElementById("sideName");
 
-if (profileName) {
+if (profilePage) {
     const user = JSON.parse(sessionStorage.getItem("localVibeUser"));
 
     if (!user) {
         window.location.href = "signin.html";
     } else {
-        document.getElementById("userName").textContent = user.name;
-        document.getElementById("userEmail").textContent = user.email;
-        document.getElementById("userAvatar").textContent = user.name.charAt(0).toUpperCase();
+        document.getElementById("sideName").textContent = user.name;
+        document.getElementById("sideEmail").textContent = user.email;
+        document.getElementById("avatar").textContent = user.name.charAt(0).toUpperCase();
         document.getElementById("fullName").textContent = user.name;
         document.getElementById("email").textContent = user.email;
+        document.getElementById("phone").textContent = user.phone || "Not provided";
+        document.getElementById("address").textContent = user.address || "Not provided";
 
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
-        document.getElementById("cartCount").textContent = cart.length;
+        const orders = JSON.parse(localStorage.getItem("localVibeOrders")) || [];
 
-        document.getElementById("logoutButton").addEventListener("click", function() {
+        document.getElementById("cartCount").textContent = cart.length;
+        document.getElementById("orderCount").textContent = orders.length;
+
+        const recentOrders = document.getElementById("recentOrders");
+
+        if (orders.length > 0) {
+            recentOrders.innerHTML = "";
+
+            orders.slice(-3).reverse().forEach(function(order) {
+                const orderLine = document.createElement("p");
+                orderLine.className = "muted";
+                orderLine.textContent = "Order #" + order.id + " - " + (order.status || "Placed");
+                recentOrders.appendChild(orderLine);
+            });
+        }
+
+        document.getElementById("logout").addEventListener("click", function() {
             sessionStorage.removeItem("localVibeUser");
         });
     }
